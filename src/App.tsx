@@ -8,6 +8,9 @@ import PlatformSelector from "./components tsx/PlatformSelector";
 
 function App() {
   const [selectedGenre, setSelectGenre] = useState<Genre | null>(null);
+  const [selectedPlatform, setSelectPlatform] =
+    useState<PlatformSelector | null>(null);
+
   return (
     <Grid
       templateAreas={{
@@ -30,8 +33,14 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <PlatformSelector />
-        <GameGride selectedGenre={selectedGenre} />
+        <PlatformSelector
+          selectedPlatform={selectedPlatform}
+          onSelectedPlatform={(platform) => setSelectPlatform(platform)}
+        />
+        <GameGride
+          selectedPlatform={selectedPlatform}
+          selectedGenre={selectedGenre}
+        />
       </GridItem>
     </Grid>
   );
