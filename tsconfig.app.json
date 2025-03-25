@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "src/components tsx/ColorModesSwitch.tsx"]
+  "include": ["src", "src/components /ColorModesSwitch.tsx"]
 }
